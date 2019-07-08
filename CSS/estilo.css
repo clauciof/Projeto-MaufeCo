@@ -1,0 +1,26 @@
+.formcadastro{
+    
+    margin-top: 15px;
+
+}
+
+
+.imagem{
+
+    border-style: solid;
+    border-color: black ;
+    height: 100% ;
+}
+
+
+.imagem1{
+
+    border-style: solid;
+    border-color: black ;
+    height: 100px ;
+    
+}
+
+.container-body{
+    margin: 50%;
+}
