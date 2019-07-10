@@ -1,12 +1,9 @@
 
 <?php
+include "conexao.php";
 //conexao com o server
-$servidor = "127.0.0.1";
-$usuario = "root";
-$senha_ = "";
-$db = "cadastro";
-$var = 3;
-$conexao = mysqli_connect($servidor, $usuario, $senha_, $db);
+$conexao = new Conexao();
+$conexao = mysqli_connect($conexao->get_servidor(), $conexao->get_usuario(), $conexao->get_senha(), $conexao->get_db());
 
 //pegando dados do forms de cadastro
 $email_usuario = $_POST['inputemail'];
@@ -26,4 +23,4 @@ $query_insere = "INSERT INTO Usuarios(email, senha, endereco, cidade, estado, co
 mysqli_query($conexao, $query_insere);
 
 
-header("Location: /FormsBD/paginainicial.html");
+header("Location: /ProjetoMaufeCo/paginainicial.html");
